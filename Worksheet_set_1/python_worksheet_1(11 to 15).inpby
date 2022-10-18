@@ -1,0 +1,195 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "60bce666",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:5\n",
+      "Factorial of 5 is 120 \n",
+      " **************************************************\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Question 11. Write a python program to find the factorial of a number ?\n",
+    "# Answer 11.\n",
+    "import math as mt\n",
+    "def fact(n):\n",
+    "    return(mt.factorial(n))\n",
+    "num = int(input(\"Enter the number:\"))\n",
+    "f = fact(num)\n",
+    "print(\"Factorial of\", num, \"is\", f,'\\n',\"*\"*50)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "81f098c5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter any number : 9\n",
+      "9 is Composite number\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Question 12. Write a python program to find whether a number is prime or compsite?\n",
+    "# Answer 12.\n",
+    "num = int(input(\"Enter any number : \"))\n",
+    "if num > 1:\n",
+    "    for i in range(2, num):\n",
+    "        if (num % i) == 0:\n",
+    "            print(num, \"is Composite number\")\n",
+    "            break\n",
+    "    else:\n",
+    "        print(num, \"is a Prime number\")\n",
+    "elif num == 0 or 1:\n",
+    "    print(num, \"is a neither prime NOR composite number\")\n",
+    "else:\n",
+    "    print(num, \"Sorry\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "6d34b1a5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Please Enter your String :my name is prasj\n",
+      "Your String is not Palindrome.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Question 13. Write a python program to check whether a given string is palaindrome or not?\n",
+    "# Answer 13.\n",
+    "def isPalindrome(s):\n",
+    "    return s == s[::-1]\n",
+    " \n",
+    "s = str(input(\"Please Enter your String :\"))\n",
+    "ans = isPalindrome(s)\n",
+    " \n",
+    "if ans:\n",
+    "    print(\"Your String is Palindrome.\")\n",
+    "else:\n",
+    "    print(\"Your String is not Palindrome.\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "1305b26e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "What do you want to know in right-angled triangle ? [Altitude/Base/Hypotenuse]hypotenuse\n",
+      "Please enter the length of Altitude of right-angled triangle: 6\n",
+      "Please enter the length of Base of right-angled triangle: 4\n",
+      "Please enter the unit of length: mm\n",
+      "ANSWER:\n",
+      " The Hypotenuse of right-angled triangle is  7.211102550927978 mm\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Question 14. Write a python program to get the third side of right-angled triangle from two given side?\n",
+    "# Answer 14.\n",
+    "y=str(input(\"What do you want to know in right-angled triangle ? [Altitude/Base/Hypotenuse]\"))\n",
+    "x=y.upper()\n",
+    "if x ==\"ALTITUDE\":\n",
+    "    b=float(input(\"Please enter the length of Base of right-angled triangle: \"))\n",
+    "    c=float(input(\"Please enter the length of Hypotenuse of right-angled triangle: \"))\n",
+    "    d=str(input(\"Please enter the unit of length: \"))\n",
+    "    unknown_side=(c**2-b**2)**0.5\n",
+    "    print(\"ANSWER:\\n The Altitude of right-angled triangle is \",unknown_side,d)\n",
+    "elif x ==\"BASE\":\n",
+    "    a=float(input(\"Please enter the length of Altitude of right-angled triangle: \"))\n",
+    "    c=float(input(\"Please enter the length of Hypotenuse of right-angled triangle: \"))\n",
+    "    d=str(input(\"Please enter the unit of length: \"))\n",
+    "    unknown_side=(c**2-a**2)**0.5\n",
+    "    print(\"ANSWER:\\n The Hypotenuse of right-angled triangle is \",unknown_side,d)\n",
+    "elif x ==\"HYPOTENUSE\":\n",
+    "    a=float(input(\"Please enter the length of Altitude of right-angled triangle: \"))\n",
+    "    b=float(input(\"Please enter the length of Base of right-angled triangle: \"))\n",
+    "    d=str(input(\"Please enter the unit of length: \"))\n",
+    "    unknown_side=(b**2+a**2)**0.5\n",
+    "    print(\"ANSWER:\\n The Hypotenuse of right-angled triangle is \",unknown_side,d)\n",
+    "else:\n",
+    "    print(\"Sorry! Your information is not correct my friend.\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "7c321fa3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Please enter your string: correct\n",
+      "Count of all characters in  correct is :\n",
+      "  Counter({'c': 2, 'r': 2, 'o': 1, 'e': 1, 't': 1})\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Question 15. Write a python program to print the frequency of each of the characters present in a given string?\n",
+    "# Answer 15.\n",
+    "\n",
+    "from collections import Counter\n",
+    "a=str(input(\"Please enter your string: \"))\n",
+    "res = Counter(a)\n",
+    "print (\"Count of all characters in \",a,\"is :\\n \",res)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "52cf48e1",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
